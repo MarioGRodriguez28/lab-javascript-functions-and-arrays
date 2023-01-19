@@ -49,7 +49,7 @@ function sumNumbers(arr) {
   } else if (arr.length === 1) {
     return arr[0];
   }
-  
+
   let sum = 0;
 
   for (let i = 0; i < numbers.length; i += 1) {
@@ -58,7 +58,7 @@ function sumNumbers(arr) {
 
   return sum;
 }
-console.log(arr[(6, 12, 1, 18, 13, 16, 2, 1, 8, 10)]);
+// console.log(arr[(6, 12, 1, 18, 13, 16, 2, 1, 8, 10)]);
 
 // Iteration #3.1 Bonus:
 function sum() {}
@@ -67,7 +67,18 @@ function sum() {}
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function averageNumbers() {}
+function averageNumbers(arr) {
+  if (arr.length===0)
+  return null
+  
+  let suma = (sum, current) => sum + current;
+  if (arr.length === 0) {
+    return undefined;
+  } else {
+    return arr.reduce(suma) / arr.length;
+  }
+}
+averageNumbers(2, 6, 9, 10, 7, 4, 1, 9)
 
 // Level 2: Array of strings
 const wordsArr = [
